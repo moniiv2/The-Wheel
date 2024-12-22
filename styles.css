@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.spinning-wheel {
+    position: relative;
+    text-align: center;
+}
+
+.pointer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid red;
+    transform: translateX(-50%);
+}
+
+#wheelCanvas {
+    border: 2px solid #000;
+    border-radius: 50%;
+    transform: rotate(-90deg); /* Ensure the wheel starts upright */
+}

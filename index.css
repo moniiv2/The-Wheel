@@ -1,0 +1,13 @@
+.the-image {
+  anchor-name: --h1;
+}
+
+img {
+  width: 15%;
+  height: 15%;
+}
+.the-text{
+  position: absolute;
+  position-anchor: --h1;
+  position-area: bottom;
+}
