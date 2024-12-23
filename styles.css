@@ -1,15 +1,17 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #9b7ebd;
 }
 
 .spinning-wheel {
     position: relative;
     text-align: center;
+    background-color: #d4bee4;
+    border: solid 1.6px black;
+    border-radius: 0 0 2rem 2rem;
+    order: 1;
+    padding-top: 2rem;
 }
 
 .pointer {
@@ -28,4 +30,142 @@ body {
     border: 2px solid #000;
     border-radius: 50%;
     transform: rotate(-90deg); /* Ensure the wheel starts upright */
+    height: 430px;
+    width: 430px;
+}
+.column1 {
+    display: flex;
+    justify-items: column;
+    display: inline;
+}
+
+.main-container {
+    background-color: #9b7ebd;
+    margin: 0 3rem 3rem 1rem;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    display: inline;
+    width: 74%;
+}
+
+.topbar {
+    align-items: center;
+    padding: 1rem 0;
+    position: fixed;
+    height: 2rem;
+    align-items: center;
+    justify-items: center;
+    font-size: larger;
+    text-align: center;
+    background-color: #3b1e54;
+    color: white;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+#spinButton {
+    margin: 3rem 0 2.3rem 0;
+    border-radius: 3rem;
+    height: 10vh;
+    width: 30vh;
+    background-color: #32064A;
+    color: white;
+    display: block;
+    padding: 1.3rem;
+    order: 3;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    animation: shake 0.5s infinite;
+    animation-delay: 2.5s; /* Delay before the animation starts again */
+    animation-iteration-count: infinite; /* Repeat the animation infinitely */
+}
+
+#spinButton:hover {
+    animation: none; /* Stop the shake animation on hover */
+}
+
+.prizes {
+    display: flex;
+    background-color: #cdc1ff;
+    color: black;
+    display: inline;
+    width: 29%;
+    flex-direction: column;
+    justify-self: flex-start;
+    margin-left: 4rem;
+}
+
+.prize1, .prize2, .prize3 {
+    border: 2px solid white;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    20% { transform: translate(-2px, 0px) rotate(0.5deg); }
+    30% { transform: translate(2px, 1px) rotate(0deg); }
+    40% { transform: translate(1px, -0.5px) rotate(0.5deg); }
+    50% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+    60% { transform: translate(-2px, 0.5px) rotate(0deg); }
+    70% { transform: translate(2px, 0.5px) rotate(-0.5deg); }
+    80% { transform: translate(-1px, -0.5px) rotate(0.5deg); }
+    90% { transform: translate(1px, 1px) rotate(0deg); }
+    100% { transform: translate(1px, -1px) rotate(-0.5deg); }
+}
+
+#spinButton, .topbar {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+}
+
+.prizes h3 {
+    text-align: center;
+    font-family: "Nunito", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+}
+
+.prizes h2 {
+    text-align: center;
+    font-family: "Nunito", serif;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.indicator {
+    position: absolute;
+    top: 12px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure it stays on top of the wheel */
+}
+
+.quiz-option {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #32064A;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    color: #32064A;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quiz-option:hover {
+    background-color: #32064A;
+    color: white;
 }
